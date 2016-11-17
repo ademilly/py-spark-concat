@@ -17,6 +17,6 @@ def concat_directory(path_to_dir, path_to_outfile):
             _ for _ in os.listdir(path_to_dir)
             if 'part' in _ and not _.endswith('.crc')
         ]:
-            with open(path_to_outfile + '/' + part_file):
+            with open(path_to_dir + '/' + part_file):
                 for line in part_file:
                     outfile.write(line)
